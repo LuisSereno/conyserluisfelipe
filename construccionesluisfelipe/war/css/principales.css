@@ -20,15 +20,68 @@
          url('fonts/myriad/regular/myriadpro-regular.svg#MyriadProRegular') format('svg');
 }
 
+@font-face {
+    font-family: 'Hobostdmedium';
+    src: url('fonts/hobostdmedium/Hobo-Std-Medium.ttf') format('truetype');
+}
 
+@font-face {
+    font-family: 'BerlinSansFb';
+    src: url('fonts/BerlinSansFb/BRLNSR.eot');
+    src: url('fonts/BerlinSansFb/BRLNSR.ttf') format('truetype'),
+    	 url('fonts/BerlinSansFb/BRLNSR.woff') format('woff');
+}
+
+.btn-primary{
+	color:#1951B3;
+}
+
+.cabecera p{
+	font-family: Arial;
+	color: #FFFFFF;
+	line-height: 2 em;
+}
+	
+h1{
+	font-family:'Hobostdmedium';
+	color: #1951B3;
+	text-align: center;
+}
+
+h2,h3{
+	font-family: 'MyriadProRegular';
+	color: #1951B3;
+	font-style: italic;
+}
 
 h4{
 	font-family: 'MyriadProBold';
 	font-style: italic;
+	color:#FFFFFF;
 }
 
 p{
+	font-size: 0.9em;
+}
+.cuerpo p{
+	font-family: Arial;
+	color: #007FFF;
+	line-height: 2 em;
+}
+
+.cuerpo p.comentarios{
+	font-family: "BerlinSansFb";
+	color: #999999;
+}
+
+b{
+	font-size: 1.1em;
+	letter-spacing: 0.05em;
+}
+
+.pie p{
 	font-family: 'MyriadProRegular';
+	color:#FFFFFF;
 }
 
 p.primeralinea5{
@@ -50,3 +103,7 @@ p.primeralinea10{
 .top17 { margin-top:17px; }
 .top30 { margin-top:30px; }
 .top50 { margin-top:50px; }
+
+.fondopie{
+	background-color: #9C2B17;
+}
