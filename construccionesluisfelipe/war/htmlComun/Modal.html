@@ -1,45 +1,82 @@
 <!-- Modal -->
-<div class="modal fade" id="formpresupuesto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="myModalLabel">Solicita presupuesto</h3>
-      </div>
-      <div class="modal-body">
-        <div class="container">
-          <form class="form-horizontal">
-          <div class="form-group">
-          <div class="col-xs-2">
-            <label for="exampleInputEmail1">Email address</label>
-            </div>
-            <div class="col-xs-4">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          	</div>
-          </div>
-          <div class="form-group">
-          	<div class="col-xs-2">
-            <label for="exampleInputPassword1">Teléfono</label>
-            </div>
-            <div class="col-xs-4">
-                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Teléfono">
-            </div>
-          </div>
-          <div class="form-group">
-          	<div class="col-xs-2">
-            <label for="exampleTextArea">Consulta</label>
-            </div>
-            <div class="col-xs-4">
-            <textarea class="form-control" id="exampleTextArea" placeholder="Escriba su consulta aquí..."></textarea>
-            <p class="help-block">En menos de 24 horas tendrá su respuesta.</p>
-            </div>
-          </div>
-        </form>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
-    </div>
-  </div>
+<div class="modal fade" id="formpresupuesto" tabindex="-1" role="dialog"
+	aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title" id="myModalLabel">Solicita presupuesto</h3>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<form class="form-horizontal" id="formularioEnvioCorreo" data-toggle="validator">
+						<div class="form-group">
+							<div class="col-xs-3 col-sm-2">
+								<label for="exampleInputEmail1">Email address</label>
+							</div>
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
+								<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1"
+									placeholder="Email" data-error="Bruh, that email address is invalid" required>
+									<div class="help-block with-errors"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-3 col-sm-2">
+								<label for="exampleInputPassword1">Teléfono</label>
+							</div>
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
+								<input type="number" class="form-control" name="telefonoid"
+									id="telefonoid" placeholder="Teléfono">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-3 col-sm-2">
+								<label for="exampleTextArea">Consulta</label>
+							</div>
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
+								<textarea class="form-control" id="exampleTextArea" name="exampleTextArea"
+									placeholder="Escriba su consulta aquí..." required></textarea>
+								<p class="help-block">En menos de 24 horas tendrá su
+									respuesta.</p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					<button type="button" class="btn btn-primary" id="enviarConsulta">Enviar</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+
+<script>
+$("#enviarConsulta").on("click", function() {
+	var datosModal=[];
+	$("#formularioEnvioCorreo").find(':input').each(function() {
+         datosModal.push(this.value);
+     });
+  if (datosModal[0]=="" || !validarEmail(datosModal[0])){
+    toastr.warning('El campo email no tiene un formato correcto', 'Cuidado');
+  }else if (datosModal[2]==""){
+    toastr.warning('La consulta no puede ser vacía', 'Cuidado');
+  }else if (datosModal[3]!="" && !validarTelefono(datosModal[3])){
+    toastr.warning('El número de teléfono no tiene el formato correcto', 'Cuidado');
+  }else{
+      var params={
+      email:datosModal[0],
+      telefono:datosModal[1],
+      consulta:datosModal[2]
+      };
+      $.post("/enviarConsulta",params,function(result){
+        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendrá una respuesta', 'Correcto')
+        }).error(function() { 
+        toastr.error('No hemos podido enviar el error porque nuestros servidores están saturados actualmente, espere unos instantes', 'Error')
+
+         });
+      
+  }
+
+});
+</script>
