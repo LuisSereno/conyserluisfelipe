@@ -42,6 +42,7 @@ public class EnvioCorreo extends HttpServlet implements Serializable{
 	private String consulta="";
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException{
 		
+		log.info("Entra en el post de EnvioCorreo");
 		email= req.getParameter("email");
 		telefono= req.getParameter("telefono");
 		consulta= req.getParameter("consulta");
@@ -75,7 +76,7 @@ public class EnvioCorreo extends HttpServlet implements Serializable{
 			// A quien va dirigido
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress("luisfelipesereno@gmail.com"));
 			
-			message.setSubject("Consulta presupuesto teléfono: " + telefono);
+			message.setSubject("Consulta presupuesto telf: " + telefono);
 			message.setText(consulta);
 
 			log.info("ANTES DEL TRANSPORT");

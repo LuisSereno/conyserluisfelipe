@@ -8,38 +8,48 @@
 			</div>
 			<div class="modal-body">
 				<div class="container">
-					<form class="form-horizontal" id="formularioEnvioCorreo" data-toggle="validator">
+					<form class="form-horizontal" id="formularioEnvioCorreo" data-toggle="validator" action="/enviarConsulta" post>
 						<div class="form-group">
 							<div class="col-xs-3 col-sm-2">
 								<label for="exampleInputEmail1">Email address</label>
 							</div>
-							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
-								<input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1"
-									placeholder="Email" data-error="Bruh, that email address is invalid" required>
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-3">
+								<div class="form-group">
+								<input type="email" class="form-control" id="email" name="email"
+									placeholder="Email" data-error="El formato del email es err&oacute;neo" required>
+									<span class="glyphicon form-control-feedback" aria-hidden="true" ></span>
 									<div class="help-block with-errors"></div>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-xs-3 col-sm-2">
-								<label for="exampleInputPassword1">Teléfono</label>
+								<label for="exampleInputPassword1">Tel&eacute;fono</label>
 							</div>
-							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
-								<input type="number" class="form-control" name="telefonoid"
-									id="telefonoid" placeholder="Teléfono">
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-3">
+								<div class="form-group">
+									<input type="number" class="form-control" name="telefono"
+									id="telefono" placeholder="Tel&eacute;fono" min="000000000" max="999999999" data-error="El formato del telefono es err&oacute;neo">
+									<span class="glyphicon form-control-feedback" aria-hidden="true" ></span>
+									<div class="help-block with-errors"></div>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-xs-3 col-sm-2">
 								<label for="exampleTextArea">Consulta</label>
 							</div>
-							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-4">
-								<textarea class="form-control" id="exampleTextArea" name="exampleTextArea"
-									placeholder="Escriba su consulta aquí..." required></textarea>
-								<p class="help-block">En menos de 24 horas tendrá su
-									respuesta.</p>
+							<div class="col-xs-9 col-sm-7 col-md-5 col-lg-3">
+								<div class="form-group">
+								<textarea class="form-control" id="consulta" name="consulta"
+									placeholder="Escriba su consulta aqu&iacute;..." data-error="Necesitamos su consulta para poder responder" required></textarea>
+									<span class="glyphicon form-control-feedback" aria-hidden="true" ></span>
+									<div class="help-block with-errors"></div>
+								</div>
+								<p class="help-block">En menos de 24 horas tendr&aacute; su respuesta.</p>
 							</div>
 						</div>
-					</form>
+					</form> 
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -50,7 +60,7 @@
 	</div>
 </div>
 
-
+<!--
 <script>
 $("#enviarConsulta").on("click", function() {
 	var datosModal=[];
@@ -60,9 +70,9 @@ $("#enviarConsulta").on("click", function() {
   if (datosModal[0]=="" || !validarEmail(datosModal[0])){
     toastr.warning('El campo email no tiene un formato correcto', 'Cuidado');
   }else if (datosModal[2]==""){
-    toastr.warning('La consulta no puede ser vacía', 'Cuidado');
+    toastr.warning('La consulta no puede ser vac&iacute;a', 'Cuidado');
   }else if (datosModal[3]!="" && !validarTelefono(datosModal[3])){
-    toastr.warning('El número de teléfono no tiene el formato correcto', 'Cuidado');
+    toastr.warning('El número de tel&eacute;fono no tiene el formato correcto', 'Cuidado');
   }else{
       var params={
       email:datosModal[0],
@@ -70,13 +80,47 @@ $("#enviarConsulta").on("click", function() {
       consulta:datosModal[2]
       };
       $.post("/enviarConsulta",params,function(result){
-        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendrá una respuesta', 'Correcto')
+        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendr&aacute; una respuesta', 'Correcto')
         }).error(function() { 
-        toastr.error('No hemos podido enviar el error porque nuestros servidores están saturados actualmente, espere unos instantes', 'Error')
+        toastr.error('No hemos podido enviar el error porque nuestros servidores est&aacute;n saturados actualmente, espere unos instantes', 'Error')
 
          });
       
   }
 
 });
+</script>
+-->
+
+<script type="text/javascript">
+
+	$('form').validator().on('submit', function (e) {
+	  if (!e.isDefaultPrevented()) {
+			var datosModal=[];
+			$.each($('#formularioEnvioCorreo').serializeArray(), function(i, field) {
+			    datosModal[field.name] = field.value;
+			});
+			var params={
+		      email:datosModal["email"],
+		      telefono:datosModal["telefono"],
+		      consulta:datosModal["consulta"]
+		      };
+		      $.post("/enviarConsulta",params,function(result){
+		      	limpiarFormularioClases();
+		        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendr&aacute; una respuesta', 'Correcto')
+		        }).error(function() { 
+		        toastr.error('No hemos podido enviar el error porque nuestros servidores est&aacute;n saturados actualmente, espere unos instantes', 'Error')
+
+		       });
+	  }
+	  return false;
+
+	});
+
+$("#enviarConsulta").on("click", function() {
+
+	$("form").submit();
+
+});
+
 </script>

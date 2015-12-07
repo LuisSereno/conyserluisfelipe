@@ -37,3 +37,10 @@ function validarTelefono(numeroTelefono){
     return true;
   }
 }
+
+function limpiarFormularioClases(){
+  $("form").trigger("reset");
+  $("form").find(".glyphicon-ok").removeClass("glyphicon-ok");
+  $("form").find(".has-success").removeClass("has-success");
+  $("form").find(".has-error").removeClass("has-error");  
+}
