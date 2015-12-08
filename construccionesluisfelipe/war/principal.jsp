@@ -21,7 +21,7 @@
 		</div>
 		<div class="row top30">
 			<div class="col-xs-5 col-sm-7 col-md-5">
-				<img src="img/solecito.png">
+				<img src="img/solecito.png" alt="Experiencia">
 			</div>
 			<div class="col-xs-12 col-sm-5 col-md-7">
 				<h2>Somos l&iacute;deres en el sector</h2>
@@ -37,7 +37,7 @@
 		</div>
 		<div class="row top50">
 			<div class="col-xs-5 col-sm-7 col-md-5">
-				<img src="img/contrato.png">
+				<img src="img/contrato.png" alt="Seguridad">
 			</div>
 			<div class="col-xs-12 col-sm-5 col-md-7">
 				<h2>La felicidad del cliente es lo primero</h2>
@@ -52,7 +52,7 @@
 		</div>
 		<div class="row top50">
 			<div class="col-xs-5 col-sm-7 col-md-5">
-				<img src="img/sofa.png">
+				<img src="img/sofa.png" alt="Confianza">
 			</div>
 			<div class="col-xs-12 col-sm-5 col-md-7">
 				<h2>Hoy est&aacute;s m&aacute;s cerca de conseguir tu sue&ntilde;o</h2>

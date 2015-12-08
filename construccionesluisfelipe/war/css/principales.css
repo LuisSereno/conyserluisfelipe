@@ -107,3 +107,6 @@ p.primeralinea10{
 .fondopie{
 	background-color: #9C2B17;
 }
+
+.carousel img{ border-radius: 10px; }
+.carousel-control { background-image:none !important; }
