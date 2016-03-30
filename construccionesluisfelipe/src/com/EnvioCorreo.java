@@ -71,12 +71,12 @@ public class EnvioCorreo extends HttpServlet implements Serializable{
 			session.setDebug(true);
 			
 			MimeMessage message = new MimeMessage(session);
-			message.setFrom(new InternetAddress(email));
+			message.setFrom(new InternetAddress("luisalbertosereno@gmail.com"));
 	
 			// A quien va dirigido
 			message.addRecipient(Message.RecipientType.TO, new InternetAddress("luisfelipesereno@gmail.com"));
 			
-			message.setSubject("Consulta presupuesto telf: " + telefono);
+			message.setSubject("Consulta presupuesto telf: " + telefono + " y email: " + email);
 			message.setText(consulta);
 
 			log.info("ANTES DEL TRANSPORT");

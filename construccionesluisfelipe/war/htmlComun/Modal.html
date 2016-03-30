@@ -60,38 +60,6 @@
 	</div>
 </div>
 
-<!--
-<script>
-$("#enviarConsulta").on("click", function() {
-	var datosModal=[];
-	$("#formularioEnvioCorreo").find(':input').each(function() {
-         datosModal.push(this.value);
-     });
-  if (datosModal[0]=="" || !validarEmail(datosModal[0])){
-    toastr.warning('El campo email no tiene un formato correcto', 'Cuidado');
-  }else if (datosModal[2]==""){
-    toastr.warning('La consulta no puede ser vac&iacute;a', 'Cuidado');
-  }else if (datosModal[3]!="" && !validarTelefono(datosModal[3])){
-    toastr.warning('El número de tel&eacute;fono no tiene el formato correcto', 'Cuidado');
-  }else{
-      var params={
-      email:datosModal[0],
-      telefono:datosModal[1],
-      consulta:datosModal[2]
-      };
-      $.post("/enviarConsulta",params,function(result){
-        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendr&aacute; una respuesta', 'Correcto')
-        }).error(function() { 
-        toastr.error('No hemos podido enviar el error porque nuestros servidores est&aacute;n saturados actualmente, espere unos instantes', 'Error')
-
-         });
-      
-  }
-
-});
-</script>
--->
-
 <script type="text/javascript">
 
 	$('form').validator().on('submit', function (e) {
@@ -107,7 +75,8 @@ $("#enviarConsulta").on("click", function() {
 		      };
 		      $.post("/enviarConsulta",params,function(result){
 		      	limpiarFormularioClases();
-		        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendr&aacute; una respuesta', 'Correcto')
+		        toastr.success('Hemos recibido el mensaje, en menos de 24 obtendr&aacute; una respuesta', 'Correcto');
+		        ga('send', 'event', 'modal-consulta', 'envio-correo', 'enviarConsulta', {'nonInteraction': 1});
 		        }).error(function() { 
 		        toastr.error('No hemos podido enviar el error porque nuestros servidores est&aacute;n saturados actualmente, espere unos instantes', 'Error')
 
