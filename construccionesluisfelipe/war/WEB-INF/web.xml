@@ -14,6 +14,18 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
         <url-pattern>/enviarConsulta</url-pattern>
     </servlet-mapping>
     
+    
+    <servlet>
+	    <servlet-name>articulo-pintura</servlet-name>
+	    <jsp-file>pinta-tu-casa.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>articulo-pintura</servlet-name>
+	    <url-pattern>/pinta-tu-casa</url-pattern>
+	</servlet-mapping>
+
+
+    
     <welcome-file-list>
         <welcome-file>principal.jsp</welcome-file>
     </welcome-file-list>
