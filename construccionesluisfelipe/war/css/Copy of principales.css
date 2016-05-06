@@ -39,7 +39,10 @@
 body{
 	font-size: 1.4em;
 }
-
+.cabecera{
+	background-color: rgba(156, 43, 23, 0.10);
+    border-radius: 5px;
+}
 .cabecera p{
 	font-family: Arial;
 	color: #FFFFFF;
@@ -52,13 +55,13 @@ h1{
 	text-align: center;
 }
 
-h2,h3{
+h2,h3,h5{
 	font-family: 'MyriadProRegular';
 	color: #1951B3;
 	font-style: italic;
 }
 
-h4{
+h4,h5{
 	font-family: 'MyriadProBold';
 	font-style: italic;
 	color:#FFFFFF;
@@ -127,4 +130,10 @@ p.primeralinea10{
     position:fixed;
     z-index:1;
     right:0px;
+}
+
+h5{color:#9B2B17}
+
+.medioCabecera{
+    margin-top: 10%;
 }

@@ -14,16 +14,32 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
         <url-pattern>/enviarConsulta</url-pattern>
     </servlet-mapping>
     
-    
     <servlet>
 	    <servlet-name>articulo-pintura</servlet-name>
-	    <jsp-file>pinta-tu-casa.jsp</jsp-file>
+	    <jsp-file>/pinta-tu-casa.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 	    <servlet-name>articulo-pintura</servlet-name>
 	    <url-pattern>/pinta-tu-casa</url-pattern>
 	</servlet-mapping>
 
+    <servlet>
+	    <servlet-name>articulo-limpieza</servlet-name>
+	    <jsp-file>/limpieza-casa.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>articulo-limpieza</servlet-name>
+	    <url-pattern>/limpieza-obra</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+	    <servlet-name>articulo-fincas</servlet-name>
+	    <jsp-file>/construccion-en-fincas.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>articulo-fincas</servlet-name>
+	    <url-pattern>/construccion-fincas</url-pattern>
+	</servlet-mapping>
 
     
     <welcome-file-list>

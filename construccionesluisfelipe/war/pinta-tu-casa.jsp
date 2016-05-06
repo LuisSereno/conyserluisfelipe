@@ -27,31 +27,37 @@
 	<div class="container cuerpo">
 		<div class="row">
 			<div class="col-xs-12">
-			
-			<p>La pintura es la mejor y más barata forma de cambiar el ambiente de nuestro hogar de una manera asombrosa.
-			<p>Seguro que alguna vez (y más de una) te has decidido a pintar tu casa: porque te mudas a un sitio nuevo, porque las paredes con el uso se manchan (y teniendo niños en casa mucho más), o porque quieres cambiar el look sin más. Tienes el color ya elegido, pero necesitas ahorrar un poco y te has decidido por usar pintura al temple. Vamos a ver las propiedades de este tipo de pintura y vamos a ver unos ejemplos de cómo realizarla.
-			<p>La puedes encontrar en sacos para diluir en agua. Si queremos usar colores, tendremos que comprar tintes, pero no conseguiremos nunca colores vivos. Es muy absorbente, transpirable, porosa y permeable. Es por eso que en paredes nuevas es conveniente aplicar primero un fijador o primera mano de pintura para que tape el poro y agarre mejor la segunda capa. En una superficie ya pintada al temple, ya que el poro está tapado con la pintura ya existente. Importante es saber que no se puede pintar temple sobre pintura plástica.
-			<p>Para saber si la pintura actual es temple, solo tienes que pasarle un pañito húmedo a la pared y ver si se oscurece, ni que decir tiene que deberíamos hacerlo en un lugar donde no se viese esa "mancha".
-			<p>No es recomendable para espacios húmedos, porque un exceso de humedad produce desconchones y manchas de moho.
-			<p>Ahora vamos a ver la forma de realización del temple:
-			<p>La pintura al temple se seca muy rápido porque se aplica a capas finas o transparentes y una vez seca produce un efecto fino y mate. Las dos técnicas de realización del temple son:
-			- temple acrílico
-			- temple resinoso.
-			<p>La receta del TEMPLE ACRÍLICO:
-			-BASE ACRÍLICA
-			-RECIPIENTES PARA LOS COLORES ( No muy grandes para que no queden muy vacíos).
-			-PIGMENTOS UNOS 100gr O 150 gr POR COLOR.
-			-UNA botella para EL AGLUTINANTE.
-			<p>Proporción General:
-			250grs. de Látex
-			3/4 de litro de agua
-			<p>LA RECETA DEL TEMPLE GRASSO-RESINOSO
-			-BASE ACRILICA ( 150 ml).
-			-BARNIZ DE DAMMAR 1/2, 150 gr aprox de resina de dammar, 200ml esencia de trementina.
-			-ACEITE DE LINAZA (crudo 250ml)
-			-HUEVOS (1/2 docena).
-			-ACEITE DE LINAZA PREPOLIMERIZADO.( 250 ml)
-			<p>Es muy fácil, el orden no es demasiado importante, cuando el pigmento quede más o menos denso, ya lo tenemos. En el caso del temple al huevo hay que guardarlo en una nevera o empezará a oler mal.
+				<h1>Pinta tu casa</h1>
+				<p class="primeralinea5 top15">La pintura es la mejor y m&aacute;s barata forma de cambiar el ambiente de nuestro hogar de una manera asombrosa.</p>
+				<p class="primeralinea5">Seguro que alguna vez (y m&aacute;s de una) te has decidido a pintar tu casa: porque te mudas a un sitio nuevo, porque las paredes con el uso se manchan (y teniendo ni&ntilde;os en casa mucho m&aacute;s), o porque quieres cambiar el look sin m&aacute;s. Tienes el color ya elegido, pero necesitas ahorrar un poco y te has decidido por usar pintura al temple. Vamos a ver las propiedades de este tipo de pintura y vamos a ver unos ejemplos de c&oacute;mo realizarla.</p>
+				<p class="primeralinea5">La puedes encontrar en sacos para diluir en agua. Si queremos usar colores, tendremos que comprar tintes, pero no conseguiremos nunca colores vivos. Es muy absorbente, transpirable, porosa y permeable. Es por eso que en paredes nuevas es conveniente aplicar primero un fijador o primera mano de pintura para que tape el poro y agarre mejor la segunda capa. En una superficie ya pintada al temple, ya que el poro est&aacute; tapado con la pintura ya existente. Importante es saber que no se puede pintar temple sobre pintura pl&aacute;stica.</p>
+				<p class="primeralinea5">Para saber si la pintura actual es temple, solo tienes que pasarle un pa&ntilde;ito h&uacute;medo a la pared y ver si se oscurece, ni que decir tiene que deber&iacute;amos hacerlo en un lugar donde no se viese esa "mancha".</p>
+				<p class="primeralinea5">No es recomendable para espacios h&uacute;medos, porque un exceso de humedad produce desconchones y manchas de moho.</p>
+				<h3 class="primeralinea5">Ahora vamos a ver la forma de realizaci&oacute;n del temple:</h3>
+				<p class="primeralinea5">La pintura al temple se seca muy r&aacute;pido porque se aplica a capas finas o transparentes y una vez seca produce un efecto fino y mate. Las dos t&eacute;cnicas de realizaci&oacute;n del temple son:</p>
+				<div class="list-group">
+				  <a href="#acrilico" class="list-group-item">TEMPLE ACR&iacute;LICO</a>
+				  <a href="#grasso" class="list-group-item">TEMPLE RESINOSO</a>
+				</div>
+				<h5 class="primeralinea10" id="acrilico">TEMPLE ACR&iacute;LICO:</h5>
+				<ul  class="list-group">
+				  <li class="list-group-item">BASE ACR&iacute;LICA.</li>
+				  <li class="list-group-item">RECIPIENTES PARA LOS COLORES ( No muy grandes para que no queden muy vac&iacute;os).</li>
+				  <li class="list-group-item">PIGMENTOS UNOS 100gr O 150 gr POR COLOR.</li>
+				  <li class="list-group-item">UNA botella para EL AGLUTINANTE.</li>
+				  <li class="list-group-item">250grs. de LATEX.</li>
+				  <li class="list-group-item">3/4 de litro de AGUA.</li>
+				</ul >
+				<h5 class="primeralinea10" id="grasso">TEMPLE GRASSO-RESINOSO:</h5>
+				<ul  class="list-group">
+				  <li class="list-group-item">BASE ACRILICA ( 150 ml).</li>
+				  <li class="list-group-item">BARNIZ DE DAMMAR 1/2, 150 gr aprox de resina de dammar.</li>
+				  <li class="list-group-item">200ml esencia de TREMENTINA.</li>
+				  <li class="list-group-item">ACEITE DE LINAZA (crudo 250ml).</li>
+				  <li class="list-group-item">HUEVOS (1/2 docena).</li>
+				  <li class="list-group-item">ACEITE DE LINAZA PREPOLIMERIZADO( 250 ml).</li>
+				</ul >
+				<p class="primeralinea5">Es muy f&aacute;cil, el orden no es demasiado importante, cuando el pigmento quede m&aacute;s o menos denso, ya lo tenemos. En el caso del temple al huevo hay que guardarlo en una nevera o empezar&aacute; a oler mal.</p>
 
 			</div>
 		</div>
