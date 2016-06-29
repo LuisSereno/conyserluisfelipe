@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Cache-Control" content="max-age=1209600">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Construcciones,obras y servicios en Cabeza del Buey,Badajoz,Extremadura">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 	<title>Construcciones y Servicios Luis Felipe Sereno</title>
@@ -33,9 +34,18 @@
 		<div class="row top15">
 			<div class="col-xs-12 "><h1>"AL MAL TIEMPO BUENOS PRECIOS"</h1></div>
 		</div>
+		<div class="row top15 visible-xs visible-sm hidden-md hidden-lg">
+			<div class="col-xs-12">
+				<button type="button" class="btn btn-block" data-toggle="modal" data-target="#formpresupuesto" aria-pressed="false" autocomplete="off">
+			 		<p><b>Pida presupuesto</b></p>
+			 		<p><b>sin compromiso</b></p>
+				</button>
+			</div>
+		</div>	
+				
 		<div class="row top30">
-			<div class="col-xs-5 col-xs-offset-2 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
-				<img src="img/obra.png" alt="Experiencia">
+			<div class="col-xs-5 col-xs-offset-3 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
+				<img src="img/obra.png" class="img-responsive" alt="Experiencia">
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-7">
 				<h2>Somos l&iacute;deres en el sector</h2>
@@ -50,8 +60,8 @@
 			</div>
 		</div>
 		<div class="row top50">
-			<div class="col-xs-5 col-xs-offset-2 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
-				<img src="img/contrato.png" alt="Seguridad">
+			<div class="col-xs-5 col-xs-offset-3 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
+				<img src="img/contrato.png" class="img-responsive" alt="Seguridad">
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-7">
 				<h2>La felicidad del cliente es lo primero</h2>
@@ -65,8 +75,8 @@
 			</div>
 		</div>
 		<div class="row top50">
-			<div class="col-xs-5 col-xs-offset-2 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
-				<img src="img/servicio.png" alt="Confianza">
+			<div class="col-xs-5 col-xs-offset-3 col-sm-7 col-sm-offset-3 col-md-5 col-md-offset-0">
+				<img src="img/servicio.png" class="img-responsive" alt="Confianza">
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-7">
 				<h2>Hoy est&aacute;s m&aacute;s cerca de conseguir tu sue&ntilde;o</h2>

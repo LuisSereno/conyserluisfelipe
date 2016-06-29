@@ -3,6 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Cache-Control" content="max-age=1209600">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Construcciones,obras y servicios en Cabeza del Buey,Badajoz,Extremadura">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 	<title>Construcciones y Servicios Luis Felipe Sereno</title>

@@ -3,9 +3,10 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Cache-Control" content="max-age=1209600">
-	<meta name="description" content="Construcciones,obras y servicios en Cabeza del Buey,Badajoz,Extremadura">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Construccion,obra y servicio en Cabeza del Buey,Badajoz,Extremadura">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-	<title>Construcciones y Servicios Luis Felipe Sereno</title>
+	<title>Construccion en fincas</title>
 	<!-- Latest compiled and minified CSS -->
 	<%@ include file="htmlComun/head_common.html" %>
 	<!--<jsp:include page="htmlComun/head_common.html" />-->

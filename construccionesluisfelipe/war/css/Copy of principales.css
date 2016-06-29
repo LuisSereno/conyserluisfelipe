@@ -137,3 +137,7 @@ h5{color:#9B2B17}
 .medioCabecera{
     margin-top: 10%;
 }
+
+
+@media (max-width: @screen-xs-max) { .container{width: inherit;} }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { .container{width: inherit;} }
