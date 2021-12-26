@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cysluisfelipesereno.es/sitemap.xml
